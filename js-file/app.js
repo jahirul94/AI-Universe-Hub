@@ -18,7 +18,6 @@ const displayData =(data , limit )=>{
  mainContainer.classList.add('main-container');
  mainContainer.innerHTML ='';
  data.forEach(singleAiTools => {
-    // console.log(singleAiTools)
   mainContainer.innerHTML += ` <div class="card">
   <img src="${singleAiTools.image}" class="card-img-top" alt="...">
   <div class="card-body">
@@ -49,7 +48,8 @@ const displayData =(data , limit )=>{
 }
 
 
-// sppiner section
+
+//<------spinner section--------->
 const toggleSpinner = isLoading =>{
     const loaderSection = document.getElementById('loader');
     if(isLoading){
@@ -60,7 +60,7 @@ const toggleSpinner = isLoading =>{
     }
 }
 
-
+//<------- show all btn section --------->
 document.getElementById('show-all-btn').addEventListener('click',function(){
    loadFetch();
 

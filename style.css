@@ -1,6 +1,10 @@
 .accuracy {
-  position: relative;
-  top: -270px;
-  right: -200px;
-  display: none;
+   position: absolute;
+   left: 980px;
+   top: 50px;
+  background-color:lightsalmon;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: medium;
 }
+/* ${data.accuracy.score*100} % accuracy */

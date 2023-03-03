@@ -17,12 +17,13 @@
           </div>
     </header>
     <main>
+       <!-- Home page  -->
           <section>
-                 <div id="main-container" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-2 my-4">
+                 <div id="main-container" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-row-2 g-col-2 my-4">
 
                  </div>
           </section>
-          <!-- showall btn  -->
+          <!-- show-all-btn  -->
 
           <section id="showall-btn" class="text-center d-none" >
             <button id="show-all-btn" class="btn btn-primary">Show All </button>
@@ -30,7 +31,7 @@
     </main>
 
 
-    <!-- sppiner -->
+    <!-- spinner -->
     <div id="loader" class="d-none">
         <div class="d-flex justify-content-center align-items-center" style="height: 300px;">
             <div class="spinner-border" role="status">
@@ -39,12 +40,13 @@
           </div>
     </div>
  
+
     <!-- modal start -->
   <div class="modal fade modal-xl" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
           <div class="modal-body">
-   <!-- a -->
+   <!--Modal body start-->
   <div class ="d-flex flex-column-reverse flex-md-row flex-lg-row">
         <div class ="p-4 border" style="width: 50%;">
                 <div class ="mt-2 mb-4 ">
@@ -67,14 +69,15 @@
                  </div>
       
         </div>
-         <div id="img-part" class="p-4 text-center" style="width: 50%;">
-             
-        </div>
+        <!-- modal image -->
+         
+           <div id="img-part" style="width: 50%;" class="p-4 text-center "></div> 
+           <h4 id="accuaray-btn" class="accuracy img-overlay text-danger d-none"></h4>
   </div>  
  
  
   
-         <!-- z    -->
+         <!--Modal body end   -->
            </div>
              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
       </div>

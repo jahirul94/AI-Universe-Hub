@@ -9,19 +9,21 @@ const loadModalFetch =(id)=>{
 
 
 const displayModal =(data)=>{
+    console.log(data)
  const modalHeader = document.getElementById('modal-header');
   modalHeader.innerText =`${data.description}`;
    
 
-// image section 
+//<-------- image section ---------->
   const modalImagae = getElementByIds('img-part');
-  modalImagae.innerHTML =` <img class="img-fluid rounded pb-4" src="${data.image_link[0]}" alt="">
+  modalImagae.innerHTML =`
+  <img class="img-fluid rounded pb-4" src="${data.image_link[0]}" alt="">
    <h5>${data.input_output_examples[0].input}</h5>
    <p>${data.input_output_examples[0].output}</p>
   `;
 
 
-//  //   price section basic
+//<---------price section basic----------->
 const basics = getElementByIds('basic') ;
 const basicPrice = data.pricing[0];
   const div = document.createElement('div');
@@ -36,7 +38,7 @@ const basicPrice = data.pricing[0];
 
     basics.appendChild(div)
 
-  //  pro
+// <-------- pro ------->
 const pro = getElementByIds('pro') ;
 const proPrice = data.pricing[1];
   const div1 = document.createElement('div');
@@ -51,7 +53,7 @@ const proPrice = data.pricing[1];
 
     pro.appendChild(div1)
 
-    // enterprice
+//<--------------- enterprice--------->
 const enterprice = getElementByIds('enterprice') ;
 const enterpricePrice = data.pricing[2];
   const div2 = document.createElement('div');
@@ -67,14 +69,26 @@ const enterpricePrice = data.pricing[2];
     enterprice.appendChild(div2)
  
  
-
+//<--------- accuracy button ----------->
+const accuracyBtn = getElementByIds('accuaray-btn');
+const btnDetails = data.accuracy.score*100;
+accuracyBtn.innerText ='';
+const div4 = document.createElement('div')
+if(btnDetails > 0){
+    div4.innerText =`${btnDetails +'% Accuracy'}`
+    accuracyBtn.classList.remove('d-none')
+}
+else{
+    accuracyBtn.classList.add('d-none')
+};
+accuracyBtn.appendChild(div4)
  
 
 
 
 
 
-//   integerSection
+//<--------integration--------->
 const integerSection = getElementByIds('integration-display');
 const integration = data.integrations;
     integerSection.innerText ='';
@@ -85,7 +99,7 @@ for(const items of integration ){
 }
 
 
-// features Section
+//<------features Section----->
   const modalFeatures = getElementByIds('features');
   const featuresArray = data.features;
        modalFeatures.innerText ='';
@@ -99,7 +113,7 @@ for(const items of integration ){
  
 
 
-
+// <----- function for get element --->
  function getElementByIds(id){
     const field = document.getElementById(id);
     return field;
