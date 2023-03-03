@@ -9,7 +9,7 @@
     <!-- bootstrap link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
-<body class="container bg-danger-subtle my-4" onload="loadFetch(toggleSpinner(true))">
+<body class="container bg-danger-subtle my-4" onload="toggleSpinner(true)">
     <header>
           <div class="text-center ny-4">
               <h1>AI Universe Hub</h1>
@@ -22,8 +22,10 @@
 
                  </div>
           </section>
+          <!-- showall btn  -->
+
           <section id="showall-btn" class="text-center d-none" >
-            <button onclick="" class="btn btn-primary">Show All </button>
+            <button id="show-all-btn" class="btn btn-primary">Show All </button>
           </section>
     </main>
 
@@ -41,9 +43,51 @@
   <div class="modal fade modal-xl" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
-          <div id="modal-body-text" class="modal-body">
-                 
-            
+          <div class="modal-body">
+   <!-- a -->
+  <div class ="d-flex">
+        <div class ="p-4 border" style="width: 50%;">
+                <div class ="mt-2 mb-4 ">
+                    <h5 id="modal-header"></h5>
+                 </div>
+           <div>
+                <div id="basic">
+                     
+                </div>
+                <div id="pro">
+
+                </div>
+                <div id="enterprice">
+
+                </div>  
+           </div>   
+           
+
+
+
+
+
+
+                <div class="d-flex my-4">
+                     <div class="me-2 p-2">
+                          <h4>Features</h4>
+                          <div id="features"></div> 
+                      </div>
+                      <div class="ms-2 p-2">
+                        <h4>Integrations</h4>
+                        <div id="integration-display"></div>
+                     </div>
+                 </div>
+      
+        </div>
+         <div id="img-part" class="p-4 text-center" style="width: 50%;">
+             
+        </div>
+  </div>  
+ 
+ 
+  
+         <!-- z    -->
            </div>
              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
       </div>
@@ -54,6 +98,7 @@
 
 <!-- js file  -->
     <script src="js-file/app.js"></script>
+    <script src="js-file/modal.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>
