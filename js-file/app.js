@@ -54,30 +54,38 @@ const displayData =( data)=>{
  const displayModal =(data)=>{
     console.log(data)
   const modalContainer =document.getElementById('modal-body-text');
-   
   modalContainer.innerHTML =`
 <div class ="d-flex">
-   <div class ="p-4">
+   <div class ="p-4 border" width="50%">
         <div>
-           <div>
+           <div class ="mt-2 mb-4 ">
              <h5>${data.description}</h5>
            </div>
-           <div class ="d-flex">
-                <p">${data.pricing[0].price}</p>
-                <p>${data.pricing[1].price}</p>
-                <p>${data.pricing[2].price}</p>
+           <div class ="d-flex my-4 pt-4 ps-4">
+                <div>
+                     <h5 class ="me-4 text-success fw-semibold">${data.pricing[0].price}</h5>
+                     <h6 class ="me-4 pt-0 text-success fw-semibold">${data.pricing[0].plan}</h6>
+                </div>
+                <div>
+                     <h5 class ="mx-4 text-warning fw-semibold">${data.pricing[1].price}</h5>
+                     <h6 class ="mx-4 text-warning fw-semibold">${data.pricing[1].plan}</h6>
+                </div>
+                <div>
+                     <h5 class ="ms-4 text-danger fw-semibold">${data.pricing[2].price}</h5>
+                     <h6 class ="ms-4 text-danger fw-semibold">${data.pricing[2].plan}</h6>
+                </div>
              </div>
         </div>
-
-     <div class ="d-flex">
-        <div>
+        
+     <div class ="d-flex my-4">
+        <div class ="me-4 mt-4 pt-4">
             <h3>Features</h3>
             <li>${data.features[1].feature_name}</li>
-            <li>${data.features[2].feature_name}</li>
+            <li>${data.features[2].feature_name }</li>
             <li>${data.features[3].feature_name}</li>
              
          </div>
-         <div>
+         <div class ="ms-4 mt-4 pt-4">
            <h3>Integrations</h3>
            <li>${data.integrations[0]}</li>
            <li>${data.integrations[1]}</li>
@@ -87,13 +95,14 @@ const displayData =( data)=>{
       </div>
     </div>
 
-  <div class ="p-4">
-        <div>
-           <img class ="img-fluid" src="${data.image_link[0]}" alt="...">
-        </div>
+  <div class ="p-4 text-center border " width= "50%">
+         <div class ="text-white">
+           <img class ="rounded" width ="100%" src="${data.image_link[0]}" alt="...">
+           <bttton class="accuracy btn btn-warning">${data.accuracy.score*100} % accuracy</button>
+         </div>
          <div>
-           <h3>${data.input_output_examples[0].input}</h3>
-          <p>${data.input_output_examples[0].output}</p>
+            <h3>${data.input_output_examples[0].input}</h3>
+            <p>${data.input_output_examples[0].output}</p>
         </div>
      <div>
    </div>
