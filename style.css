@@ -2,9 +2,40 @@
    position: absolute;
    left: 980px;
    top: 50px;
-  background-color:lightsalmon;
+  background-color:lightcoral;
   padding: 5px;
   border-radius: 5px;
   font-size: medium;
+  color: white;
+  font-weight: 700;
 }
-/* ${data.accuracy.score*100} % accuracy */
+
+
+/* Responce Home page */
+@media only screen and (max-width: 767px) {
+    .main-container1{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+}}
+
+@media only screen and (min-width: 768px) {
+    .main-container1{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+}}
+
+
+@media only screen and (min-width: 992px) {
+.main-container1{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+
+}};
+
+
+
+
+

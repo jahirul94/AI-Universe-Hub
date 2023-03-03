@@ -15,7 +15,7 @@ const displayData =(data , limit )=>{
     showAllBtn.classList.add('d-none')
  }
  const mainContainer = document.getElementById('main-container')
- mainContainer.classList.add('main-container');
+ mainContainer.classList.add('main-container1');
  mainContainer.innerHTML ='';
  data.forEach(singleAiTools => {
   mainContainer.innerHTML += ` <div class="card">
