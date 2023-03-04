@@ -5,7 +5,6 @@ const loadFetch =(limit)=>{
     .then(res =>res.json())
     .then(data => displayData(data.data.tools , limit))
 }
-
 const displayData =(data , limit )=>{
  const showAllBtn = document.getElementById('showall-btn');
  if(data.length > 6 && limit){
@@ -25,7 +24,7 @@ const displayData =(data , limit )=>{
        <ol class ="ps-4"> 
         <li>${singleAiTools.features[0]}</li>
         <li>${singleAiTools.features[1]}</li>
-        <li>${singleAiTools.features[2]}</li>
+        <li>${singleAiTools.features[2] != null ? singleAiTools.features[2] : "More Features coming...."}</li>
        </ol>
   </div>
    <div class="list-group ps-3 py-2">
