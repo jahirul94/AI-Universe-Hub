@@ -9,6 +9,7 @@ const loadModalFetch =(id)=>{
 
 
 const displayModal =(data)=>{
+  console.log(data);
  const modalHeader = document.getElementById('modal-header');
   modalHeader.innerText =`${data.description}`;
    
@@ -21,14 +22,13 @@ const displayModal =(data)=>{
    <p>${data.input_output_examples[0].output}</p>
   `;
 
-
 //<---------price section basic----------->
 const basics = getElementByIds('basic') ;
 const basicPrice = data.pricing[0];
   const div = document.createElement('div');
   basics.innerText ='';
   if(basicPrice.price === '0' || basicPrice.price === 'No cost'){
-        div.innerText = `Free Of Cost`;
+        div.innerText = `Free Of Cost , Basic`;
   }
   else{
         div.innerText = `${basicPrice.price},
@@ -43,7 +43,7 @@ const proPrice = data.pricing[1];
   const div1 = document.createElement('div');
   pro.innerText ='';
   if(proPrice.price === '0' || proPrice.price === 'No cost'){
-        div1.innerText = 'Free Of Cost';
+        div1.innerText = 'Free Of Cost , Pro';
   }
   else{
         div1.innerText = `${proPrice.price},
@@ -92,9 +92,9 @@ const integerSection = getElementByIds('integration-display');
 const integration = data.integrations;
     integerSection.innerText ='';
 for(const items of integration ){
-   const li = document.createElement('li');
-   li.innerText =`${items}`
-   integerSection.appendChild(li)
+  const li = document.createElement('li');
+  li.innerText =`${items}`
+  integerSection.appendChild(li)
 }
 
 
@@ -104,7 +104,7 @@ for(const items of integration ){
        modalFeatures.innerText ='';
   for(const [feature,value] of Object.entries(featuresArray)){
       const div = document.createElement('li')
-      div.innerText =`${value.feature_name}`
+      div.innerText =`${value.feature_name}`;
       modalFeatures.appendChild(div)
   }
 
@@ -116,5 +116,6 @@ for(const items of integration ){
  function getElementByIds(id){
     const field = document.getElementById(id);
     return field;
-  }
+  };
+  
  

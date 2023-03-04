@@ -32,8 +32,8 @@ const displayData =(data , limit )=>{
       <h5 class="card-title">${singleAiTools.name}</h5>
          <div class ="d-flex justify-content-between">
             <div class="d-flex align-items-center">
-                <img height="18px" width ="18px" src="icons/calendar.png" alt="">
-                <h6 class ="ps-2">${singleAiTools.published_in}</h6>
+                <img  height="18px" width ="18px" src="icons/calendar.png" alt="">
+                <h6 class ="ps-2 pt-2">${singleAiTools.published_in}</h6>
             </div>
             <div>
                 <img onclick ="loadModalFetch('${singleAiTools.id}')" class ="me-2"  data-bs-toggle="modal" data-bs-target="#exampleModal"  height ="25px" width ="25px" src="icons/001-right-arrow.png" alt="">
