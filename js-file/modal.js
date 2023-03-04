@@ -9,7 +9,6 @@ const loadModalFetch =(id)=>{
 
 
 const displayModal =(data)=>{
-  console.log(data)
  const modalHeader = document.getElementById('modal-header');
   modalHeader.innerText =`${data.description}`;
    

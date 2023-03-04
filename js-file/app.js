@@ -63,6 +63,7 @@ const toggleSpinner = isLoading =>{
 //<------- show all btn section --------->
 document.getElementById('show-all-btn').addEventListener('click',function(){
    loadFetch();
+   loadFetch2()
 
 })
 
